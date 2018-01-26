@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import mastermind from './../../mastermind'
 
 
-export default class TodoPage extends Component {
+class TodoPage extends Component {
 
   render() {
 
@@ -24,9 +24,28 @@ export default class TodoPage extends Component {
                 Completed
               </th>
             </tr>
+            <tr>
+              <th>
+
+              </th>
+              <th>
+
+              </th>
+              <th>
+
+              </th>
+            </tr>
           </thead>
         </table>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    todos: state.todos.toJS()
+  }
+}
+
+export default connect(mapStateToProps)(TodoPage)
