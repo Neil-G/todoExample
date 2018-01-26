@@ -11,6 +11,21 @@ export default class TodoPage extends Component {
     return (
       <div>
         <h1 className="placeholder-page-label"> Todo Page </h1>
+        <table className="todos-table">
+          <thead>
+            <tr>
+              <th>
+                Title
+              </th>
+              <th>
+                Description
+              </th>
+              <th>
+                Completed
+              </th>
+            </tr>
+          </thead>
+        </table>
       </div>
     )
   }
