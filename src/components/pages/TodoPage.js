@@ -1,7 +1,6 @@
 // @flow
 
 import React, { Component } from 'react'
-import { Provider, connect } from 'react-redux'
 import mastermind from './../../mastermind'
 
 
@@ -25,20 +24,20 @@ class TodoPage extends Component {
                 Completed
               </th>
             </tr>
-            <tbody>
-              <tr>
-                <td>
-                  Get weird
-                </td>
-                <td>
-                  Let's get weird
-                </td>
-                <td>
-
-                </td>
-              </tr>
-            </tbody>
           </thead>
+          <tbody>
+            <tr>
+              <td>
+                Get weird
+              </td>
+              <td>
+                Let's get weird
+              </td>
+              <td>
+
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     )
