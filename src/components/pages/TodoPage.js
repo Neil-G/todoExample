@@ -11,7 +11,7 @@ export default class TodoPage extends Component {
     return (
       <div>
         <h1 className="placeholder-page-label"> Todo Page </h1>
-        <table className="todos-table">
+        <table className="ui celled striped table todos-table">
           <thead>
             <tr>
               <th>
