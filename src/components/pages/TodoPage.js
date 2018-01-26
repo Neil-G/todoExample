@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react'
+import { Provider, connect } from 'react-redux'
 import mastermind from './../../mastermind'
 
 
@@ -24,17 +25,19 @@ class TodoPage extends Component {
                 Completed
               </th>
             </tr>
-            <tr>
-              <th>
+            <tbody>
+              <tr>
+                <td>
+                  Get weird
+                </td>
+                <td>
+                  Let's get weird
+                </td>
+                <td>
 
-              </th>
-              <th>
-
-              </th>
-              <th>
-
-              </th>
-            </tr>
+                </td>
+              </tr>
+            </tbody>
           </thead>
         </table>
       </div>
@@ -42,10 +45,4 @@ class TodoPage extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    todos: state.todos.toJS()
-  }
-}
-
-export default connect(mapStateToProps)(TodoPage)
+export default mastermind.connectStore(TodoPage, ['todos'])

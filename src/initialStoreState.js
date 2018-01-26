@@ -2,5 +2,6 @@ export default {
   auth: {
     user: undefined
   },
-  appState: {}
+  appState: {},
+  todos: {}
 }
