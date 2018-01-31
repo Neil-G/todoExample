@@ -6,12 +6,6 @@ import mastermind from './../../mastermind'
 
 class LoginPage extends Component {
 
-  componentWillMount() {
-    // const user = mastermind.branch('auth').user
-    // const isAuthenticated = Object.keys(user).length > 0
-    // if (isAuthenticated) { this.props.history.push('/') }
-  }
-
   render() {
     return(
       <div className="login-page">
@@ -36,24 +30,7 @@ class LoginPage extends Component {
             </div>
           <button
             className="ui button login-button full-width"
-            onClick={(e) => {
-              e.preventDefault()
-
-              // get login form inputs
-              const loginCredentials = {
-                email: this.refs['email-input'].value,
-                password: this.refs['password-input'].value
-              }
-
-              // login
-              mastermind.update('localLogin', loginCredentials)
-
-                // redirect on successful login
-                .then((res) => {
-                  // const user = res.data.user
-                  this.props.history.push('/')
-                })
-          }}>
+            onClick={(e) => {}}>
             Login
           </button>
         </form>

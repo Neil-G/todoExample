@@ -15,18 +15,11 @@ class TopNav extends Component {
       <nav className="top-nav">
         <button
           className="ui button"
-          onClick={mastermind.update.bind(this, 'localLogout')}
+          onClick={() => {}}
         > Logout </button>
       </nav>
     )
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    auth: state.auth.toJS()
-  }
-}
-
 
 export default mastermind.connectStore(TopNav, ['auth'])
