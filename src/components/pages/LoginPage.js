@@ -6,6 +6,14 @@ import mastermind from './../../mastermind'
 
 class LoginPage extends Component {
 
+  addLogin = (e) => {
+    console.log(this.refs['email-input'].value)
+    e.preventDefault()
+    mastermind.update('addLogin', {
+      email: this.refs['email-input'].value,
+    })
+  }
+
   render() {
     return(
       <div className="login-page">
@@ -30,7 +38,8 @@ class LoginPage extends Component {
             </div>
           <button
             className="ui button login-button full-width"
-            onClick={(e) => {}}>
+            onClick={ e => this.addLogin(e) }
+          >
             Login
           </button>
         </form>
