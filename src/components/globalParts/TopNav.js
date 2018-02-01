@@ -5,6 +5,10 @@ import mastermind from './../../mastermind'
 
 class TopNav extends Component {
 
+  removeLogin = () => {
+    mastermind.update('removeLogin')
+  }
+
   render() {
     const { auth } = this.props
 
@@ -15,7 +19,7 @@ class TopNav extends Component {
       <nav className="top-nav">
         <button
           className="ui button"
-          onClick={() => {}}
+          onClick={() => this.removeLogin() }
         > Logout </button>
       </nav>
     )
