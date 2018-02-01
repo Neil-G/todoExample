@@ -7,10 +7,14 @@ import mastermind from './../../mastermind'
 class LoginPage extends Component {
 
   addLogin = (e) => {
-    console.log(this.refs['email-input'].value)
     e.preventDefault()
     mastermind.update('addLogin', {
       email: this.refs['email-input'].value,
+    })
+    // redirect on successful login
+    .then((res) => {
+      // cont user = res.data.user
+      this.props.history.push('/')
     })
   }
 
